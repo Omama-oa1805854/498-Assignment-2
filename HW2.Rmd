@@ -1,0 +1,50 @@
+---
+title: "HW2"
+author: "Omama"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## CO2 dataset
+
+This dataset has 84 observations of 5 variables, two of them are numeric and three are categorical.
+
+## Varaibles
+
+The *Plant* variable is a factor with 12 levels and each level has 7 observations.
+
+```{r CO2 1}
+table(CO2$Plant)
+length(table(CO2$Plant))
+```
+
+The variables *Type* and *Treatment* are categorical and each one of them has two categories.
+
+```{r CO2 2}
+table(CO2$Type)
+table(CO2$Treatment)
+```
+
+The *conc* variable is numeric and it has min 95, max 1000, and mean = 435.
+
+```{r CO2 3}
+summary(CO2$conc)
+```
+
+The *uptake* variable is numeric and it has min 7.7, max 45.5, and mean = 27.21.
+
+```{r CO2 4}
+summary(CO2$uptake)
+```
+
+## Histograms
+
+```{r CO2 5, echo = F}
+par(mfrow=c(1, 2))
+hist(CO2$conc)
+hist(CO2$uptake)
+par(mfrow=c(1, 1))
+```
