@@ -53,3 +53,10 @@ par(mfrow=c(1, 1))
 ```{r CO2 6}
 barplot(table(CO2$Type))
 ```
+
+#Nour  
+```{r CO2 7, echo=F}
+head(CO2)
+boxplot(head(CO2$conc), col = "orange")
+```
+
