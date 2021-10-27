@@ -48,3 +48,8 @@ hist(CO2$conc)
 hist(CO2$uptake)
 par(mfrow=c(1, 1))
 ```
+
+#kholoud 
+```{r CO2 6}
+barplot(table(CO2$Type))
+```
